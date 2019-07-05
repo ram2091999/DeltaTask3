@@ -1,0 +1,17 @@
+<%- include partials/userHeader.ejs -%>
+<h1>Your Forms:</h1>
+<p>Click on the forms to view submission</p>
+<%if(d!=undefined){%>
+<%for(var i=0;i<d[0].formsArray.length;i++){%>
+
+
+
+
+  <ul>
+    <li> <a href="/viewSubmission/<%=user%>/<%=d[0].formsArray[i].formTitle%> ">  <%=d[0].formsArray[i].formTitle%> </a></li>
+  </ul>
+<%}}%>
+
+<button type="button" name="button" onclick="window.location.href='/formHeader/<%= user %>'"">Add a form</button>
+
+<%- include partials/footer.ejs -%>

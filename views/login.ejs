@@ -1,0 +1,20 @@
+<%- include partials/header.ejs -%>
+<div class="body">
+  <%if(success){%>
+  <div class="success">
+    <h5><%=success%></h5>
+
+  </div>
+<%}%>
+  <form class="user-login" action="/login" method="post">
+    <label for="username">Username</label>
+    <input type="text" name="username" value="">
+    <label for="password">Password</label>
+    <input type="password" name="password" value="">
+    <button type="submit" name="button">Login</button>
+    <button type="button" name="button" onclick="window.location.href='/signup'">Sign up</button>
+  </form>
+
+</div>
+
+<%- include partials/footer.ejs -%>

@@ -1,0 +1,32 @@
+<%- include partials/userHeader.ejs -%>
+
+<%if(!docs.length){%>
+<p>No submissions as of now.Come back later</p>
+<%} else{%>
+ <%docs.forEach(function(e){%>
+   <div class="submission">
+     <ul>
+
+
+    <%e.forEach(function(sub){%>
+      <li><%=sub%></li>
+
+
+
+    <%});%>
+
+
+      </ul>
+   </div>
+
+
+
+
+
+ <%});%>
+
+
+<%}%>
+
+
+<%- include partials/footer.ejs -%>

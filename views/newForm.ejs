@@ -1,0 +1,30 @@
+<%- include partials/userHeader.ejs -%>
+<form class="" action="/newForm/<%= user %>" method="post">
+   <h3><%=newForm.formTitle %></h3>
+
+    <ul>
+      <%for(var i=0;i<newForm.fields.length;i++){%>
+
+
+        <li>
+
+
+          <%= newForm.fields[i].fieldName+"-"+newForm.fields[i].fieldType%>
+
+
+        </li>
+      <%}%>
+
+
+
+    </ul>
+
+   <button type="button" name="button" onclick="window.location.href='/addInput/<%= user %>'">Add a field</button>
+   <button type="button" onclick="window.location.href='/customTemplates/<%=user%>'" name="button">Default Templates</button>
+
+  <button type="submit" name="button" >Create form</button>
+</form>
+
+
+
+<%- include partials/footer.ejs -%>

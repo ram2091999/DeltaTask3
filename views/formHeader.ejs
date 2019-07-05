@@ -1,0 +1,14 @@
+<%- include partials/userHeader.ejs -%>
+ <form class="" action="/formHeader/<%=user%>" method="post">
+   <label for="">Name of the form</label>
+   <input type="text" name="formTitle" value="">
+   <label for="">How long do you want the form to be active?</label>
+   <select  name="fieldTime">
+     <option value="twelve">12 Hours</option>
+     <option value="twentyFour">24 Hours</option>
+     <option value="fortyEight">48 Hours</option>
+   </select>
+   <button type="submit" name="button">Add Fields</button>
+ </form>
+
+<%- include partials/footer.ejs -%>

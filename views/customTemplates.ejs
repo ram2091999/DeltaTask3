@@ -1,0 +1,36 @@
+<%- include partials/userHeader.ejs -%>
+<form class="" action="/customTemplates/<%=user%>" method="post">
+
+<ol>
+
+  <%options.forEach(function(e,i){%>
+
+
+
+    <li>
+      <ul class="nested-ul">
+
+
+      <%e.forEach(function(j){%>
+        <li><%=j.fieldName%>:<%=j.fieldType%></li>
+    <%  });%>
+    </ul>
+    </li>
+
+
+
+
+
+  <%});%>
+    </ol>
+    <select class="" name="optionIndex">
+      <% for(var i=0;i<options.length;i++){%>
+
+
+         <option value="<%=i%>"><%=i+1%></option>
+       <%}%>
+  </select>
+  <button type="submit" name="button">Choose</button>
+</form>
+
+<%- include partials/footer.ejs -%>

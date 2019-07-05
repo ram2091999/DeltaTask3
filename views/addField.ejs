@@ -1,0 +1,17 @@
+<%- include partials/userHeader.ejs -%>
+<form class="" action="/addInput/<%= user %>" method="post">
+  <label for="">Field Name:</label>
+  <input type="text" name="fieldName" value="">
+  <label for="">Field type:</label>
+  <select  name="fieldType">
+    <option value="text">Text</option>
+    <option value="number">Number</option>
+    <option value="checkbox">Checkbox</option>
+    <option value="file">Image</option>
+  </select>
+  <button type="Submit" name="button">Add field</button>
+
+
+
+
+<%- include partials/footer.ejs -%>

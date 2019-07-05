@@ -1,0 +1,18 @@
+<%- include partials/header.ejs -%>
+<%- include partials/errorMessage.ejs -%>
+<form class="" action="/signup" method="post">
+
+  <label for="">name:</label>
+  <input type="text" name="name" value="">
+  <label for="">Pick a username:</label>
+  <input type="text" name="username" value="">
+  <label for="">password (atleast 5 characters):</label>
+  <input type="password" name="password" value="">
+  <label for="">confirm password:</label>
+  <input type="password" name="confirmPassword" value="">
+  <button type="submit" name="button" href="/login">Sign Up</button>
+</form>
+<%if(errors){%>
+  <p><%=errors.msg%></p>
+<%}%>
+<%- include partials/footer.ejs -%>

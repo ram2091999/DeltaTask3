@@ -1,0 +1,20 @@
+<%- include partials/userHeader.ejs -%>
+<form class="" action="/formSubmission/<%=user%>/<%=form1.creator %>/<%=form1.formTitle %>" method="post">
+  <h3><%=form1.formTitle%></h3>
+  <%for(var i=0;i<form1.fields.length;i++){%>
+
+
+    <label for=""><%=form1.fields[i].fieldName%></label>
+    <%if(form1.fields[i].fieldType=="file"){%>
+      <input type="file" name="photo" value="">
+    <%}else if(form1.fields[i].fieldType=="checkbox"){%>
+
+      <input type="checkbox" name="<%=form1.fields[i].fieldName%>" value="(checked)">
+    <%}else{%>
+    <input type=<%=form1.fields[i].fieldType%> name=<%=form1.fields[i].fieldName%> value="">
+  <%}}%>
+  <button type="submit" name="button">Submit</button>
+</form>
+
+
+<%- include partials/footer.ejs -%>

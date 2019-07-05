@@ -1,0 +1,12 @@
+<%- include partials/userHeader.ejs -%>
+
+<h1>Forms you could fill out:</h1>
+<ul>
+   <%docs.forEach(function(e){%>
+     <li><a href="/fillform/<%=user%>/<%=e.creator%>/<%=e.formTitle%>"><%=e.formTitle%></a></li>
+   <%});%>
+
+</ul>
+
+<button type="button" onclick="window.location.href='/user/<%=user%>'" name="button">View your forms</button>
+<%- include partials/footer.ejs -%>
