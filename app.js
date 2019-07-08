@@ -503,8 +503,8 @@ app.post("/signup",function(req,res){
             }
             else{
               passport.authenticate("local")(req,response,function(){
-                success="Successfully Registered!"
-                res.redirect("/login");
+                //success="Successfully Registered!"
+                //res.redirect("/login");
               });
             }
 
