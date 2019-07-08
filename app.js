@@ -502,7 +502,7 @@ app.post("/signup",function(req,res){
               res.redirect("/signup");
             }
             else{
-              passport.authenticate("local")(req,response,function(){
+              passport.authenticate("local")(req,res,function(){
                 //success="Successfully Registered!"
                 //res.redirect("/login");
               });
